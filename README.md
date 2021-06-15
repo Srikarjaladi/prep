@@ -23,3 +23,7 @@ MERGING MEETING TIMES:
       Do not assume the meetings are in order. The meeting times are coming from multiple teams.
 
       Write a solution that's efficient even when we can't put a nice upper bound on the numbers representing our time ranges. Here we've simplified our times down to the number         of 30-minute slots past 9:00 am. But we want the function to work even for very large numbers, like Unix timestamps. In any case, the spirit of the challenge is to m  erge         meetings where start_time and end_time don't have an upper bound. 
+
+REVERSE STRING IN PLACE:
+      Write a function that takes a list of characters and reverses the letters in place
+      ANS:We swap the first and last characters, then the second and second-to-last characters, and so on until we reach the middle. 
