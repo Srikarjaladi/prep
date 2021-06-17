@@ -25,5 +25,15 @@ MERGING MEETING TIMES:
       Write a solution that's efficient even when we can't put a nice upper bound on the numbers representing our time ranges. Here we've simplified our times down to the number         of 30-minute slots past 9:00 am. But we want the function to work even for very large numbers, like Unix timestamps. In any case, the spirit of the challenge is to m  erge         meetings where start_time and end_time don't have an upper bound. 
 
 REVERSE STRING IN PLACE:
+      
       Write a function that takes a list of characters and reverses the letters in place
       ANS:We swap the first and last characters, then the second and second-to-last characters, and so on until we reach the middle. 
+
+REVERSE WORDS:
+      
+       You're working on a secret team solving coded transmissions.
+
+      Your team is scrambling to decipher a recent message, worried it's a plot to break into a major European National Cake Vault. The message has been mostly deciphered, but         all the words are backward! Your colleagues have handed off the last step to you.
+
+      Write a function reverse_words() that takes a message as a list of characters and reverses the order of the words in place
+      EX: 'CAKE POUND STEAL' -> 'STEAL POUND CAKE'
