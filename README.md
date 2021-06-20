@@ -37,3 +37,13 @@ REVERSE WORDS:
 
       Write a function reverse_words() that takes a message as a list of characters and reverses the order of the words in place
       EX: 'CAKE POUND STEAL' -> 'STEAL POUND CAKE'
+
+MERGE SORTED ARRAYS:
+
+       In order to win the prize for most cookies sold, my friend Alice and I are going to merge our Girl Scout Cookies orders and enter as one unit.
+       Each order is represented by an "order id" (an integer).
+       We have our lists of orders sorted numerically already, in lists. Write a function to merge our lists of orders into one sorted list. 
+       EX: my_list     = [3, 4, 6, 10, 11, 15] , alices_list = [1, 5, 8, 12, 14, 19]
+       # Prints [1, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15, 19]
+       print(merge_lists(my_list, alices_list))
+       We can do this in O(n) time and space. If we are using a built in function it will take O(nlogn).
