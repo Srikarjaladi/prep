@@ -47,3 +47,24 @@ MERGE SORTED ARRAYS:
        # Prints [1, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15, 19]
        print(merge_lists(my_list, alices_list))
        We can do this in O(n) time and space. If we are using a built in function it will take O(nlogn).
+
+SUPER BALANCED TREE:
+
+        A tree is "superbalanced" if the difference between the depths of any two leaf nodes ↴ is no greater than one. 
+        We do a depth-first walk ↴ through our tree, keeping track of the depth as we go. When we find a leaf, we add its depth to a list of depths if we haven't seen that depth             already.
+        Each time we hit a leaf with a new depth, there are two ways that our tree might now be unbalanced:
+        There are more than 2 different leaf depths
+        There are exactly 2 leaf depths and they are more than 1 apart.
+        Why are we doing a depth-first walk and not a breadth-first ↴ one? You could make a case for either. We chose depth-first because it reaches leaves faster, which allows us to         short-circuit earlier in some cases. 
+        Complexity: O(n) time and O(n) space
+         For time, the worst case is the tree is balanced and we have to iterate over all nnn nodes to make sure.
+
+          For the space cost, we have two data structures to watch: depths and nodes.
+
+          depths will never hold more than three elements, so we can write that off as O(1).
+
+          Because we’re doing a depth first search, nodes will hold at most ddd nodes where ddd is the depth of the tree (the number of levels in the tree from the root node down               to the lowest node). So we could say our space cost is O(d).
+
+          But we can also relate ddd to nnn. In a balanced tree, ddd is O(log⁡2(n)). And the more unbalanced the tree gets, the closer ddd gets to nnn.
+
+          In the worst case, the tree is a straight line of right children from the root where every node in that line also has a left child. The traversal will walk down the line             of right children, adding a new left child to nodes at each step. When the traversal hits the rightmost node, nodes will hold half of the nnn total nodes in the tree. Half           n is O(n), so our worst case space cost is O(n). 
